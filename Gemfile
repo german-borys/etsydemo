@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
+ruby "2.2.2"
 
 
 gem 'rails', '4.0.0'
-
-gem 'sqlite3'
 
 gem 'sass-rails', '~> 4.0.0'
 
@@ -20,6 +19,15 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem "paperclip", '~> 4.3'
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
+group :development, :test do
+	gem 'sqlite3'
+end
 
 group :doc do
   gem 'sdoc', require: false
