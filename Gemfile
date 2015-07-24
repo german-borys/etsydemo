@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.2.2"
+ruby "2.0.0"
 
 
 gem 'rails', '4.0.0'
@@ -19,6 +19,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem "paperclip", '~> 4.3'
+
+gem "paperclip-dropbox", ">= 1.1.7"
+
+gem "figaro"
 
 group :production do
 	gem 'pg'
